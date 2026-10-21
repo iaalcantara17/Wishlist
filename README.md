@@ -1,57 +1,25 @@
-# Android Project 2 - Wishlist
+# Wishlist
 
-Submitted by: **Israel Alcantara**
+A simple Android wishlist app where you add things you want to buy with a price and a link. I built it for CodePath's Android course.
 
-**Wishlist** is a wishlist app that helps the user keep track of what they want to buy.
+<img src="walkthrough.gif" alt="Walkthrough of adding, opening, and deleting wishlist items" width="300" />
 
-Time spent: **6** hours spent in total
+## What it does
 
-## Required Features
+- Add an item with a name, a price, and a URL. The app shows a message if any field is missing or the price isn't a number.
+- Items appear in a list with the price formatted in dollars.
+- Tap an item to open its link in the browser. Links without `http://` or `https://` get `https://` added.
+- Long-press an item to delete it.
 
-The following **required** functionality is completed:
+## Tech stack
 
-- [x] **User can add an item to their wishlist**
-- [x] **User can see their list of items based on previously inputted items**
+Kotlin, Android SDK (min SDK 24), RecyclerView.
 
-The following **optional** features are implemented:
+## How to run it
 
-- [ ] Wishlist app is 🎨 **customized** 🎨
-- [x] User can delete an item by long pressing on the item
-- [x] User can open an item's URL by clicking on an item
+1. Clone the repo and open it in Android Studio.
+2. Let Gradle sync, then run the `app` configuration on an emulator or a device.
 
-The following **additional** features are implemented:
+## Limitations
 
-* [ ] None
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with CloudConvert
-
-## Notes
-
-A few common challenges when building an app like this:
-- Getting RecyclerView updates right (making sure new items actually appear immediately after tapping “Add”).
-- Handling input validation cleanly (empty fields, non-numeric prices, and malformed URLs).
-- Making list items display correctly (using `wrap_content` so items don’t take up the whole screen).
-- Dealing with edge-to-edge layouts/insets so UI doesn’t get covered by system bars.
-- Handling “open URL” safely so invalid URLs don’t crash the app.
-
-## License
-
-    Copyright 2026 Israel Alcantara
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    You may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+The list lives in memory only, so it's cleared when the app closes.
